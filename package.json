@@ -2,7 +2,10 @@
 	"name": "sneakers-store",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://qmaximp.github.io/sneakers-store/",
 	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
