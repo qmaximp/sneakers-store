@@ -1,0 +1,149 @@
+.drawer {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+
+	.drawerBlock {
+		position: absolute;
+		width: 400px;
+		height: 100%;
+		right: 0;
+		background: white;
+		box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+		padding: 30px;
+		width: 420px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h2 {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.cartEmpty {
+			width: 290px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			overflow: auto;
+			flex: 1;
+			gap: 10px;
+			p {
+				text-align: center;
+			}
+			.greenButton {
+				width: 80%;
+				height: 55px;
+				background: #9dd558;
+				border-radius: 18px;
+				border: 0;
+				color: #fff;
+				font-size: 16px;
+				cursor: pointer;
+				transition: 0.2s ease-in-out;
+				position: relative;
+
+				&:hover {
+					background: lighten(#9dd558, 10%);
+					img {
+						transform: scale(-1, 1) translateX(5px);
+					}
+				}
+				&:active {
+					background: darken(#9dd558, 10%);
+				}
+				img {
+					position: absolute;
+					left: 30px;
+					top: 20px;
+					transition: 0.2s ease-in-out;
+					transform: scale(-1, 1);
+				}
+			}
+		}
+		.items {
+			overflow: auto;
+			flex: 1;
+
+			.cartItem {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 20px;
+				border: 1px solid #f8f8f8;
+				padding: 20px;
+				border-radius: 15px;
+
+				> div {
+					margin: 0 5px;
+				}
+				p {
+					font-size: 16px;
+				}
+				b {
+					font-size: 14px;
+				}
+				.removeBtn {
+					cursor: pointer;
+					opacity: 0.5;
+					transition: 0.35s ease-in-out;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.cartTotalBlock {
+			width: 100%;
+			ul {
+				margin: 30px 0;
+				li {
+					display: flex;
+					align-items: flex-end;
+					margin-bottom: 15px;
+					div {
+						flex: 1;
+						height: 1px;
+						border-bottom: 1px dashed #dfdfdf;
+						position: relative;
+						top: -4px;
+						margin: 0 15px;
+					}
+				}
+			}
+			.greenButton {
+				width: 100%;
+				height: 55px;
+				background: #9dd558;
+				border-radius: 18px;
+				border: 0;
+				color: #fff;
+				font-size: 16px;
+				cursor: pointer;
+				transition: 0.2s ease-in-out;
+				position: relative;
+
+				&:hover {
+					background: lighten(#9dd558, 10%);
+					img {
+						transform: translateX(5px);
+					}
+				}
+				&:active {
+					background: darken(#9dd558, 10%);
+				}
+				img {
+					position: absolute;
+					right: 30px;
+					top: 20px;
+					transition: 0.2s ease-in-out;
+				}
+			}
+		}
+	}
+}

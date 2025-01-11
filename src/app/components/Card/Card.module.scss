@@ -1,0 +1,27 @@
+.card {
+	width: 195px;
+	border: 1px solid #f8f8f8;
+	padding: 30px;
+	border-radius: 40px;
+	transition: 0.2s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	&:hover {
+		box-shadow: 0 20px 35px rgba(0, 0, 0, 0.06);
+		transform: translateY(-5px);
+		// cursor: pointer; //=== на будующие
+	}
+	> .favorite {
+		position: absolute;
+		cursor: pointer;
+	}
+	> h5 {
+		font-size: 15px;
+		flex: 1;
+	}
+	> div {
+		> img {
+			cursor: pointer;
+		}
+	}
+}
